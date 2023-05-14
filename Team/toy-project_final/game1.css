@@ -1,0 +1,113 @@
+@font-face{
+    font-family: 'dos';
+    src: url('../DOSGothic.ttf') format('truetype');  
+}
+
+
+body {
+    justify-content: center;
+    height: 100vh;
+    background: url("https://search.pstatic.net/sunny/?src=http%3A%2F%2Fwww.matcl.com%2Ffiles%2Fattach%2Fimages%2F2791205%2F600%2F842%2F002%2F686cdad080c60ea1b18e3e88ca6aa251.jpg&type=sc960_832") no-repeat center;
+    background-size: cover;
+}
+
+.img1{
+    text-align: center;
+}
+
+.img{
+    height: 350px;
+    justify-content: center;
+    margin-bottom: -45px;
+    cursor: pointer;
+}
+
+
+.btn{
+    text-align: center;
+}
+
+.btn1{
+    font-family: 'dos';
+    margin-left: 2px;
+    height: 30px;
+    background-color: rgb(217, 144, 66);
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+}
+.btn2{
+    font-family: 'dos';
+    margin-left: 210px;
+    height: 30px;
+    background-color: rgb(217, 144, 66);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+
+}
+
+.font{
+    color: blue;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(217, 144, 66);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.shop {
+    margin-top: 200px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 100px;
+    background-color: rgb(217, 144, 66);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.walk {
+    margin-top: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 100px;
+    background-color: rgb(217, 144, 66);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* .immage{
+    display: none;
+} */
+
+/* .store{
+    display: none;
+} */
+

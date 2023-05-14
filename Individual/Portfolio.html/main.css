@@ -1,0 +1,1364 @@
+/* 가나초콜릿체 명조 */
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 나눔스퀘어 네오 고딕체 */
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 바디, 최상단 타이틀 p 영역 */
+body,
+.title p{
+    margin: 0;
+    padding: 0;
+    /* 드래그 방지 */
+    user-select: none;
+}
+/* -------------------top-nav 영역------------------------ */
+
+/* 화면 상단 fixd nav바  */
+.top-nav{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    background-color: #FFF4E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 화면 상단 nav바 로고영역, a태그 영역 */
+.topNav-logo,
+.topNav-item{
+    display: flex;
+}
+
+/* 화면 상단 nav바 로고영역 이미지 */
+.topNav-logo img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* 화면 상단 nav바 로고영역 텍스트 */
+.topNav-logo p{
+    font-family: 'ghanachoco';
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 14px;
+    margin-left: -12px;
+    color: #4D4D4D;
+    cursor: pointer;
+}
+
+/* 화면 상단 nav바 로고영역 a태그 */
+.topNav-item a{
+    font-family: 'ghanachoco';
+    font-size: 20px;
+    margin: 0;
+    font-weight: 300;
+    margin-right: 30px;
+    padding: 0;
+    color: #4D4D4D;
+    /* a태그 밑줄 없애는 방법 */
+    text-decoration-line: none;
+}
+
+
+.topNav-item a:hover{
+    color: #B46060;
+}
+
+/* -------------------------------------------------------- */
+
+
+
+/* -------------title영역 --------------------------------- */
+
+/* 홈페이지 최상단 타이틀 영역 */
+.title{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF4E0;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.title h1 {
+    height: 100px;
+}
+
+
+/*------------ blockchain developer 애니메이션 -------------*/
+.title .bolck span {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: bounce .4s ease infinite alternate;
+    font-family: 'ghanachoco';
+    font-size: 80px;
+    color: #B46060;
+    text-shadow: 0 1px 0 #774040c2,
+                 0 2px 0 #774040c2,
+                 0 3px 0 #774040c2,
+                 0 4px 0 #774040c2,
+                 0 5px 0 #774040c2,
+                 0 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent,
+                 0 10px 10px #b4606096;
+}
+  
+.title .bolck span:nth-child(2) { animation-delay: .1s; }   /* l */
+.title .bolck span:nth-child(3) { animation-delay: .2s; }   /* o */
+.title .bolck span:nth-child(4) { animation-delay: .3s; }   /* c */
+.title .bolck span:nth-child(5) { animation-delay: .4s; }   /* k */
+.title .bolck span:nth-child(6) { animation-delay: .5s; }   /* c */
+.title .bolck span:nth-child(7) { animation-delay: .6s; }   /* h */
+.title .bolck span:nth-child(8) { animation-delay: .7s; }   /* a */
+.title .bolck span:nth-child(9) { animation-delay: .8s; }   /* i */
+.title .bolck span:nth-child(10) { animation-delay: .9s; }   /* n */
+.title .bolck span:nth-child(11) { animation-delay: .1s; }   /* D */
+.title .bolck span:nth-child(12) { animation-delay: .2s; }   /* e */
+.title .bolck span:nth-child(13) { animation-delay: .3s; }   /* v */
+.title .bolck span:nth-child(14) { animation-delay: .4s; }   /* e */
+.title .bolck span:nth-child(15) { animation-delay: .5s; }   /* l */
+.title .bolck span:nth-child(16) { animation-delay: .6s; }   /* o */
+.title .bolck span:nth-child(17) { animation-delay: .7s; }   /* p */
+.title .bolck span:nth-child(18) { animation-delay: .8s; }   /* e */
+.title .bolck span:nth-child(19) { animation-delay: .9s; }   /* r */
+
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #774040c2,
+                 0 2px 0 #774040c2,
+                 0 3px 0 #774040c2,
+                 0 4px 0 #774040c2,
+                 0 5px 0 #774040c2,
+                 0 6px 0 #774040c2,
+                 0 7px 0 #774040c2,
+                 0 8px 0 #774040c2,
+                 0 9px 0 #774040c2,
+                 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+
+/* --------------------------------------------------------- */
+
+.title .title-name{
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    font-family: 'ghanachoco';
+    font-size: 80px;
+    color: #B46060;
+    text-shadow: 0 1px 0 #774040c2,
+                 0 2px 0 #774040c2,
+                 0 3px 0 #774040c2,
+                 0 4px 0 #774040c2,
+                 0 5px 0 #774040c2,
+                 0 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent,
+                 0 10px 10px #b4606096;
+}
+
+
+/* 타이틀영역 블록체인 텍스트 */
+/* .title .title-block{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 50px;
+    font-weight: 700;
+    color: #4D4D4D;
+} */
+
+/* 타이틀영역 위지원입니다. 텍스트 */
+/* .title .title-p{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%);
+    font-size: 50px;
+    font-weight: 600;
+    color: #4D4D4D;
+} */
+
+/* 타이틀 영역 위지원 텍스트 */
+/* .title .title-name{
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%);
+    font-size: 60px;
+    font-weight: 900;
+} */
+
+/* -------------------------------------------------------- */
+
+
+
+
+/* ---------------about영역 ------------------------------- */
+/* 홈페이지 2번째 about영역 */
+.about{
+    position: relative;
+    width: 100vw;
+    height: 200vh;
+}
+
+
+/* about영역 상단 타이틀 about me 텍스트 */
+.about .about-title,
+.Skill .skill-title,
+.project .proj-title,
+.Contact .con-title{
+    font-family: 'ghanachoco';
+    font-size: 50px;
+    position: absolute;
+    color: #4D4D4D;
+    margin: 0;
+    top: 95px;
+}
+
+.title-div{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 500px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.about-title.TitleActive,
+.skill-title.TitleActive,
+.proj-title.TitleActive,
+.con-title.TitleActive{
+    /* ease: 애니메이션 느리게 시작했다가 빨라지고 느리게 끝님 */
+    /* forwards: 애니메이션 중이 아닌경우, 애니메이션 마지막 키 프레임 css적용 */
+    animation: titleAni 1.5s ease forwards;
+}
+
+@keyframes titleAni {
+    0%{
+        top: 95px;
+    }
+    30%{
+        top: -11px;
+    }
+    60%{
+        top: 36px;
+    }
+    100%{
+        top: 10px;
+    }
+}
+
+/* ------about / profile 영역 ----------------------------- */
+
+/* 어바웃 영역 프로필, 사진 영역 */
+.about .my1{ 
+    position: relative;
+    top: 230px;
+
+    width: 100%;
+    height: 45vh;
+}
+
+/* 어바웃 영역 프로필 영역 */
+.about .profile{
+    position: absolute;
+    left: 10%;
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 어바웃 영역 서브타이틀 (profile/Education/History)*/
+.about-subTitle{
+    font-family: 'NanumSquareNeo-Variable';
+    color: #4D4D4D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 어바웃 영역 프로필 - 상단 색깔바 */
+.about .profile .top-bar{
+    width: 450px;
+    height: 20px;
+    background-color: #FFBF9B;
+    /* 타원형 막대 만드는 방법 */
+    border-radius: 2em;
+    position: absolute;
+    right: -450px;
+}
+
+.profile .top-bar.topActive{
+    animation: proftopbar 1s ease forwards;
+}
+
+@keyframes proftopbar {
+    0%{
+        right: -450px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+/* 어바웃 영역 프로필 - 하단 색깔바 */
+.about .profile .bottom-bar{
+    width: 100%;
+    height: 20px;
+    background-color: #FFBF9B;
+    /* 타원형 막대 만드는 방법 */
+    border-radius: 2em;
+    position: absolute;
+    bottom: 10px;
+    right: -600px;
+
+}
+
+.profile .bottom-bar.bottomActive{
+    animation: profbottbar 1s ease forwards;
+}
+
+@keyframes profbottbar {
+    0%{
+        right: -580px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+
+/* 어바웃 영역 프로필 동그라미 전체영역 */
+.about .profile .about-ul{
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    left: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 어바웃 영역 프로필 각 동그라미 */
+.about .profile .about-li{
+    background-color: #B46060;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* 어바웃 프로필 내용-제목 */
+.about .profile .about-p{
+    font-family: 'NanumSquareNeo-Variable';
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    right: 10%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* 어바웃 프로필 내용-텍스트 */
+.about .profile .about-p span,
+.about .profile .about-p a{
+    font-weight: 500;
+
+}
+/* --------------------------------------------------------- */
+
+
+/* ------------about / image ------------------------------- */
+/* 어바웃 사진영역 */
+.about .image{
+    position: absolute;
+    right: 10%;
+
+    width: 300px;
+    height: 400px;
+    border: 3px solid #4D4D4D;
+    margin: 0;
+    padding: 0;
+}
+
+/* 사진영역 사진 넣을 곳 */
+.about .image div{
+    position: absolute;
+    width: 270px;
+    height: 370px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+}
+
+.about .image img{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* -------------------------------------------------------- */
+
+
+
+/* 어바웃 education, history 영역 */
+.about .my2{
+    position: relative;
+    top: 320px;
+    width: 100%;
+    height: 110vh;
+}
+
+
+
+/* --------------about / education ------------------------ */
+
+/* 어바웃 education 영역 */
+.about .education{
+    font-family: 'NanumSquareNeo-Variable';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1100px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* 어바웃 영역 에듀케이션 - 상단 색깔바 */
+.about .education .top-bar{
+    width: 880px;
+    height: 20px;
+    position: absolute;
+    right: -880px;
+    background-color: #FFBF9B;
+    /* 타원형 막대 만드는 방법 */
+    border-radius: 2em;
+}
+
+.education .top-bar.topActive{
+    animation: edutopbar 1s ease forwards;
+}
+
+@keyframes edutopbar {
+    0%{
+        right: -880px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+/* 어바웃 영역 에듀케이션 - 하단 색깔바 */
+.about .education .bottom-bar{
+    width: 1100px;
+    height: 20px;
+    background-color: #FFBF9B;
+    /* 타원형 막대 만드는 방법 */
+    border-radius: 2em;
+    position: absolute;
+    bottom: 10px;
+    right: -1100px;
+}
+
+.education .bottom-bar.bottomActive{
+    animation: edubottbar 1s ease forwards;
+}
+
+@keyframes edubottbar {
+    0%{
+        right: -1100px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+/* 어바웃 에듀케이션 영역 - 대학1, 대학2, 학원 영역지정
+    어바웃 히스토리 영역 - 늘푸른 */
+.about .education .university1,
+.about .education .university2,
+.about .education .kga,
+.about .history .his1{
+    position: absolute;
+    width: 75%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    left: 200px;
+    border-bottom: 1px solid #4d4d4d5b;
+}
+
+/* 어바웃 에듀케이션 영역 p 설정 */
+.education p,
+.history p{
+    margin: 0;
+    color: #4D4D4D;
+}
+
+/* 어바웃 에듀케이션 영역 - 대학1 */
+.about .education .university1{
+    top: 78px;
+
+}
+
+/* 어바웃 에듀케이션 영역 - 대학2 */
+.about .education .university2{
+    top: 258px;
+}
+
+/* 어바웃 에듀케이션 영역 - 학원 */
+.about .education .kga{
+    bottom: 55px;
+}
+
+/* 어바웃 에듀케이션 - 기간
+    어바웃 히스토리 - 기간 */
+.about .education .edu-year,
+.about .history .his-year{
+    font-weight: 600;
+    color: #B46060;
+    margin-bottom: 5px;
+
+}
+
+/* 어바웃 에듀케이션 - 전공 */
+.about .education .edu-major,
+.about .history .his-major{
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 5px;
+
+}
+
+/* 어바웃 에듀케이션 - 학교,학원 이름 */
+.about .education .edu-name,
+.about .history .his-name{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
+
+/* 어바웃 에듀케이션 - 서브텍스트 */
+.about .education .edu-sub,
+.about .history .his-sub{
+    line-height: 1.5;
+}
+
+/* 어바웃 에듀케이션 - 아이콘영역 */
+.about .education .edu-univ,
+.about .education .edu-kga,
+.about .history .his-icon{
+    position: absolute;
+    left: -125px;
+    width: 80px;
+    height: 80px;
+    background-color: #B46060;
+    border-radius: 50%;
+}
+
+/* 어바웃 에듀케이션 - 아이콘 */
+.about .education .edu-univ img,
+.about .education .edu-kga img,
+.about .history .his-icon img{
+    width: 100%;
+    height: 100%;
+}
+/* -------------------------------------------------------- */
+
+
+
+/* ------------ about / History---------------------------- */
+
+/* 어바웃 히스토리 영역 */
+.about .history{
+    font-family: 'NanumSquareNeo-Variable';
+    position: absolute;
+    bottom: 0;
+    width: 1100px;
+    height: 290px;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+}
+
+/* 어바웃 히스토리영역 상단 컬러바 */
+.about .history .top-bar{
+    width: 920px;
+    height: 20px;
+    background-color: #FFBF9B;
+    /* 타원형 막대 만드는 방법 */
+    position: absolute;
+    border-radius: 2em;
+    right: -920px;
+}
+
+.history .top-bar.topActive{
+    animation: histopbar 1s ease forwards;
+}
+
+@keyframes histopbar {
+    0%{
+        right: -920px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+/* 어바웃 히스토리영역 하단 컬러바 */
+.about .history .bottom-bar{
+    width: 1100px;
+    height: 20px;
+    background-color: #FFBF9B;
+    /* 타원형 막대 만드는 방법 */
+    border-radius: 2em;
+    position: absolute;
+    bottom: 10px;
+    right: -1100px;
+}
+
+.history .bottom-bar.bottomActive{
+    animation: hisbttbar 1s ease forwards;
+}
+
+@keyframes hisbttbar {
+    0%{
+        right: -1100px;
+    }
+    100%{
+        right: 0;
+    }
+}
+/* -------------------------------------------------------- */
+
+
+
+
+/* ------------ skill ------------------------------------- */
+
+/* 스킬 영역 */
+.Skill{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF4E0;
+}
+
+/* 스킬영역 여자 이미지 */
+.Skill .skill-women{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* 스킬들이 위치할 부모영역 */
+.Skill .skill-ground{
+    position: relative;
+    /* border: 1px solid; */
+    width: 1500px;
+    height: 100vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+/* 애니메이션 적용 전 내용 */
+/* 각 스킬별 영역지정 */
+.Skill .skill-Html,
+.Skill .skill-Css,
+.Skill .skill-Java,
+.Skill .skill-React,
+.Skill .skill-Nodejs,
+.Skill .skill-Blockchain,
+.Skill .skill-Photoshop,
+.Skill .skill-Illustrator,
+.Skill .skill-Premierepro{
+    font-family: 'NanumSquareNeo-Variable';
+    width: 70px;
+    height: 70px;
+    border: 1px solid #4D4D4D;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+/* html 위치선정 */
+.Skill .skill-Html.skActive{
+    animation: htmlani 1s ease forwards;
+
+}
+
+@keyframes htmlani {
+    0%{
+        top: 49%;
+        left: 44%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        top: 10%;
+        left: 30%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+/* Java 위치선정 */
+.Skill .skill-Java.skActive{
+    animation: javaani 1s ease forwards;
+}
+
+@keyframes javaani {
+    0%{
+        top: 54%;
+        left: 43%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        top: 30%;
+        left: 5%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+/* React 위치선정 */
+.Skill .skill-React.skActive{
+    animation: reactani 1s ease forwards;
+}
+
+@keyframes reactani {
+    0%{
+        bottom: 33%;
+        left: 42%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        bottom: 5%;
+        left: 5%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+/* Blockchain 위치선정 */
+.Skill .skill-Blockchain.skActive{
+    animation: blockani 1s ease forwards;
+}
+
+@keyframes blockani {
+    0%{
+        bottom: 35%;
+        left: 47%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        bottom: 19%;
+        left: 22%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+
+/* Css 위치선정 */
+.Skill .skill-Css.skActive{
+    animation: cssani 1s ease forwards;
+}
+
+@keyframes cssani {
+    0%{
+        top: 52%;
+        left: 50%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        top: 14%;
+        left: 55%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+
+
+/* Nodejs 위치선정 */
+.Skill .skill-Nodejs.skActive{
+    animation: nodeani 1s ease forwards;
+}
+
+@keyframes nodeani {
+    0%{
+        top: 46%;
+        right: 46%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        top: 24%;
+        right: 10%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+
+/* Photoshop 위치선정 */
+.Skill .skill-Photoshop.skActive{
+    animation: phoani 1s ease forwards;
+}
+
+@keyframes phoani {
+    0%{
+        top: 49%;
+        right: 42%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        top: 49%;
+        right: 26%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+/* Illustrator 위치선정 */
+.Skill .skill-Illustrator.skActive{
+    animation: ilani 1s ease forwards;
+}
+
+@keyframes ilani {
+    0%{
+        bottom: 34%;
+        right: 43%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        bottom: 2%;
+        right: 20%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+/* Premierepro 위치선정 */
+.Skill .skill-Premierepro.skActive{
+    animation: preani 1s ease forwards;
+}
+
+@keyframes preani {
+    0%{
+        bottom: 36%;
+        right: 40%;
+        border: 1px solid #4D4D4D;
+
+    }
+    100%{
+        bottom: 19%;
+        right: 5%;
+        width: 200px;
+        height: 200px;
+        border: 3px solid #4D4D4D;
+    }
+}
+
+/* 변경사항 */
+.Skill .skill-Html{
+    top: 49%;
+    left: 44%;
+}
+
+.Skill .skill-Java{
+    top: 54%;
+    left: 43%;
+}
+
+.Skill .skill-React{
+    bottom: 33%;
+    left: 42%;
+}
+
+.Skill .skill-Blockchain{
+    bottom: 35%;
+    left: 47%;
+}
+
+.Skill .skill-Css{
+    top: 52%;
+    left: 50%;
+}
+
+.Skill .skill-Nodejs{
+    top: 46%;
+    right: 46%;
+}
+
+.Skill .skill-Photoshop{
+    top: 49%;
+    right: 42%;
+}
+
+.Skill .skill-Illustrator{
+    bottom: 34%;
+    right: 43%;
+}
+
+.Skill .skill-Premierepro{
+    bottom: 36%;
+    right: 40%;
+}
+
+
+
+
+/* 각 스킬별 스킬이름 */
+
+/* 변경내용 */
+.Skill .skill-subtitle{
+    color: #4D4D4D;
+    font-size: 1px;
+    font-weight: bold;
+}
+
+
+.Skill .skill-subtitle.skSubTitleActive{
+    animation: sksubActive 1s ease forwards;
+}
+
+@keyframes sksubActive {
+    0%{
+        font-size: 1px;
+    }
+    100%{
+        font-size: 20px;
+    }
+}
+
+
+
+/* 변경사항 */
+.Skill .skill-level{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* 스킬별 숙련도 */
+.Skill .skill-level.skLevelActive{
+    animation: sklevel 1s ease forwards;
+}
+
+@keyframes sklevel {
+    0%{
+        width: 50px;
+        height: 25px;
+        top: 15px;
+    }
+    100%{
+        width: 200px;
+        height: 100px;
+        top: 50px;
+    }
+}
+
+
+
+/* 변경사항 */
+.Skill .skill-level .level-basic,
+.Skill .skill-level .level-better,
+.Skill .skill-level .level-best{
+    width: 10px;
+    background-color: #d3d3d3;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1px;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+.level-basic.levelH{
+    animation: lvbasic 1s ease forwards;
+}
+
+.level-better.levelH{
+    animation: lvbetter 1s ease forwards;
+}
+
+.level-best.levelH{
+    animation: lvbest 1s ease forwards;
+}
+
+/* 변경사항 */
+.Skill .skill-level .level-basic{
+    height: 10px;
+}
+
+.Skill .skill-level .level-better{
+    height: 20px;
+}
+
+.Skill .skill-level .level-best{
+    height: 30px;
+}
+
+@keyframes lvbasic {
+    0%{
+        height: 10px;
+        width: 10px;
+        font-size: 1px;
+    }
+    100%{
+        height: 30px;
+        width: 50px;
+        font-size: 20px;
+    }
+}
+@keyframes lvbetter {
+    0%{
+        height: 20px;
+        width: 10px;
+        font-size: 1px;
+    }
+    100%{
+        height: 60px;
+        width: 50px;
+        font-size: 20px;
+    }
+}
+@keyframes lvbest {
+    0%{
+        height: 30px;
+        width: 10px;
+        font-size: 1px;
+    }
+    100%{
+        height: 90px;
+        width: 50px;
+        font-size: 20px;
+    }
+}
+
+
+/* 변경사항 */
+.Skill .skill-subtext{
+    position: absolute;
+    top:0px;
+    font-size: 0.3px;
+    opacity: 0;
+    text-align: center;
+
+}
+
+.Skill .skill-subtext.sksubtaxt{
+    animation: sksubText 1s ease forwards;
+
+}
+
+@keyframes sksubText {
+    0%{
+        top:0px;
+        font-size: 0.3px;
+        opacity: 0;
+    }
+    100%{
+        top: 160px;
+        margin: 0;
+        font-size: 15px;
+        opacity: 1;
+    }
+}
+
+/* -------------------------------------------------------- */
+
+
+
+.project{
+    font-family: 'NanumSquareNeo-Variable';
+    color: #4D4D4D;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.swiper{
+    width: 1200px;
+    height: 600px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.swiper-content{
+    width: max-content;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    transition: 1s;
+}
+.swiper-item{
+    width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 이벤트 제거 */
+    pointer-events: none;
+}
+
+.prev,
+.next{
+    /* 부모보다 앞으로 */
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    width: 50px;
+}
+.prev{
+    left: 40px;
+}
+.next{
+    right: -20px;
+}
+.swiper-wrap{
+    width: 1200px;
+    height: max-content;
+    position: relative;
+    margin: auto;
+    top: 230px;
+}
+
+.project .proj1{
+    position: relative;
+    width: 100%;
+    height: 96%;
+    border: 10px solid #FFF4E0;
+}
+
+.project .proj-img{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    right: 5%;
+    transform: translate(0,-50%);
+}
+
+.project .proj-no{
+    position: absolute;
+    left: 40px;
+    top: 85px;
+    font-size: 35px;
+    font-weight: 700;
+    color: #B46060;
+}
+
+.project .proj-year{
+    position: absolute;
+    top: 73px;
+    left: 40px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.project .proj-major{
+    position: absolute;
+    top: 155px;
+    font-size: 40px;
+    left: 40px;
+}
+
+.project .proj-name{
+    position: absolute;
+    top: 225px;
+    font-size: 25px;
+    font-weight: 600;
+    left: 40px;
+}
+
+.project .proj-p{
+    position: absolute;
+    top: 308px;
+    left: 40px;
+    width: 650px;
+    font-size: 18px;
+}
+
+.project .proj-span{
+    font-weight: 800;
+}
+
+.prevL{
+    border-left: 5px solid #FFBF9B;
+    border-top: 5px solid #FFBF9B;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-45deg)
+}
+
+.nextR{
+    border-right: 5px solid #FFBF9B;
+    border-bottom: 5px solid #FFBF9B;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-45deg)
+}
+/* ---------------------------------------------------------- */
+
+
+/* ----------contact -------------------------------------- */
+
+.Contact{
+    font-family: 'NanumSquareNeo-Variable';
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF4E0;
+}
+
+.Contact .con-list{
+    position: absolute;
+    width: 80%;
+    height: 400px;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Contact .con-item{
+    background-color: white;
+
+    width: 300px;
+    height: 400px;
+
+    position: relative;
+}
+
+.Contact .con-icon{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #FFBF9B;
+    border-radius: 50%;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.Contact .con-image{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.Contact .con-subTitle{
+    font-size: 30px;
+    font-weight: 700;
+    color: #B46060;
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.Contact .con-subtext{
+    position: absolute;
+    bottom: 15%;
+    text-decoration-line: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    color: #4D4D4D;
+    font-weight: 700;
+
+}

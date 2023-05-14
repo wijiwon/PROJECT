@@ -1,0 +1,82 @@
+@font-face{
+    font-family: 'dos';
+    src: url('./DOSGothic.ttf') format('truetype');    
+}
+
+body {
+    font-family: 'dos';
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+    background: url("https://search.pstatic.net/sunny/?src=http%3A%2F%2Fwww.matcl.com%2Ffiles%2Fattach%2Fimages%2F2791205%2F600%2F842%2F002%2F686cdad080c60ea1b18e3e88ca6aa251.jpg&type=sc960_832") no-repeat center;
+    background-size: cover;
+}
+body ::berofe { 
+    font-family: 'dos';
+    content: "";
+    position: absolute; z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 7);
+}
+.login-page {position: relative; z-index: 2;}
+.login-page h1 {
+    font-family: 'dos';
+    font-size: 32px; color:green;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.page-text  {width: 480px; position: relative; 
+            margin-top: 20px;
+}
+
+.page-text:first-child {margin-top: 0;}
+.page-text input {
+    font-family: 'dos';
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid green;
+    font-size: 18px; color: black;
+    outline: none;
+}
+
+.page-text label {
+    font-family: 'dos';
+    position: absolute; left:10px; top: 15px;
+    font-size: 18px; color: white;
+    transform: top .5s ease;
+    
+
+}
+.page-text input:focus + label,
+.page-text input:valid + label {
+    top: 0;
+    font-size: 15px; color: black;
+}
+
+.button {margin-top: 30px;}
+.button button{
+    font-family: 'dos';
+width: 100%; height: 60px;
+margin-top: 20px;
+background: green;
+color: white;
+font-size: 20px;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+}
+
+.caption {
+    font-family: 'dos';
+    margin-top: 20px;
+    text-align: center;
+}
+
+.caption a {
+    font-family: 'dos';
+    font-size: 15px; color: #2216c2e8;
+    text-decoration: none;
+}

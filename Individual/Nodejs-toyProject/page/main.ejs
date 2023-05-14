@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list-main page</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="background">
+        <div class="div-top">
+            <img src="/css/logo.png" alt="로고 이미지">
+        </div>
+        <div class="div-top-login">
+            <div class="user-btn">
+                <div><a href="/list/login">로그인</a></div>
+                <div><a href="/list/signup">회원가입</a></div>
+            </div>
+        </div>
+        <div class="div-bttom">
+            <% data.forEach((el,index) => { %>
+                <div class="board">
+                    <div class="num-box">
+                        <span class="num"><%= el.postIndex %></span>
+                    </div>
+                    <div class="title"><a href="/list/detail/<%= el.postIndex %>"><%= el.title %></a></div>
+                    <div class="content"><a href="/list/detail/<%= el.postIndex %>"><%= el.content %></a></div>
+                    <div class="image-box">
+                        <img src="/image/<%= el.image %>" alt="왜안나옴">
+                    </div>
+                    <div class="like-div">
+                        <img class="heart" src="/css/heart.png" alt="좋아요 아이콘">
+                        <div class="like"><%= el.likes %></div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        <div class="div-bttom-btn">
+            <a class="add" href="/list/insert">게시글 추가</a>
+        </div>
+    </div>
+</body>
+
+</html>

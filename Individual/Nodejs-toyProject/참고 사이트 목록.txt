@@ -1,0 +1,9 @@
+[ 참고 사이트 목록 ]
+
+- express.urlencoded
+	- https://reload1bronze.tistory.com/m/252
+- express.static()
+	- https://hwb0218.tistory.com/35
+- 이미지 파일등록. multer모듈
+	- https://seoyun-is-connecting-the-dots.tistory.com/313?category=1052041
+	- https://handhand.tistory.com/110

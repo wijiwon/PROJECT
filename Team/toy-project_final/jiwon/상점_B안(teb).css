@@ -1,0 +1,179 @@
+@font-face{
+    font-family: 'dos';
+    src: url('../DOSGothic.ttf') format('truetype');  
+}
+
+body{
+    margin: 0;
+    font-family: 'dos';
+}
+
+.background{
+    background-image: url(../배경.png);
+    background-size: 100vw, 100vh;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.back {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(217, 144, 66);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.ground{
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 800px;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 80px;
+
+}
+
+.tebMenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tebMenu > input{
+    display: none;
+
+}
+
+.tebMenu > label{
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.tebMenu .tebPosion{
+    width: 230px;
+    height: 40px;
+    border: 5px solid;
+    justify-content: center;
+    text-align: center;
+}
+
+.tebMenu .tebWeapon{
+    width: 230px;
+    height: 40px;
+    border: 5px solid;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.tebMenu .tebChange{
+    width: 230px;
+    height: 40px;
+    border: 5px solid;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.divPosion{
+    position: relative;
+    width: 720px;
+    height: 80%;
+    background-color: blue;
+    margin-left: 40px;
+    display: none;
+}
+
+.divWeapon{
+    position: relative;
+    width: 720px;
+    height: 80%;
+    background-color: blue;
+    margin-left: 40px;
+}
+
+input[class="tebPosion"]:checked ~ .divPosion{
+    display: block;
+}
+
+.posionHP{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+
+.posionHPSub {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: none;
+
+}
+
+.posionHPSub h1{
+    position: absolute;
+    left: 50px;
+}
+
+.posionHPSub p{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+}
+
+.posionHP:hover ~ .posionHPSub{
+    display: block;
+}
+
+
+.posionAtk{
+    position: absolute;
+    left: 170px;
+    top: 4px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+
+.posionAtkSub {
+    position: absolute;
+    top: 100px;
+    left: 280px;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: none;
+
+}
+
+.posionAtkSub h1{
+    position: absolute;
+    left: 50px;
+}
+
+.posionAtkSub p{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+}
+
+.posionAtk:hover ~ .posionAtkSub{
+    display: block;
+}

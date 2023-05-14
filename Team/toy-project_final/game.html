@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+    <link rel="stylesheet" href="./game.css">
+</head>
+<body>
+<section class="login-page">
+    <h1>로그인 페이지</h1>
+    <form action="">
+<div class="page-text">
+    <input type="text"  id="ID"
+    autocomplete="off" requierd>
+    <label for=""> 아이디 </label>
+</div>
+<div class="page-text">
+    <input type="password" id="PWD"
+    utocomplete="off" requierd>
+    <label for=""> 비밀번호 </label>
+</div>
+<div class="button">
+    <button type="submit" onclick="check()">로그인</button>
+</div>
+</form>
+
+
+</section>
+<script>
+    document.querySelector(".button").onclick = function(){
+
+        window.localStorage.removeItem("Atk");
+        window.localStorage.removeItem("hp");
+        window.localStorage.removeItem("def");
+        window.localStorage.removeItem("my");
+        window.localStorage.removeItem("exp");
+        window.localStorage.removeItem("hpp");
+        window.localStorage.removeItem("re");
+        
+    }
+</script>
+</body>
+<script src="./game.js"></script>
+</html>

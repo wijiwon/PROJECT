@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상점</title>
+    <link rel="stylesheet" href="./상점.css">
+</head>
+<body>
+    <div class="background">
+        <div class="back" onclick="location.href='./상점,산책 선택.html'">< 돌아가기</div>
+        <div class="ground">
+            <div class="tebMenu">
+                <input class="tebPosion" type="radio" id="posion" name="tebMenu" checked>
+                <label class="tebPosion" for="Posion">물약</label>
+                
+                <input class="tebWeapon" type="radio" id="weapon" name="tebMenu">
+                <label class="tebWeapon" for="weapon">무기&장비</label>
+                
+                <input class="tebChange" type="radio" id="change" name="tebMenu">
+                <label class="tebChange" for="change">몬스터의 잔해</label>
+            </div>
+
+            <div class="divPosion">
+                <img class="posionHP" src="../체력증가.png" alt="hp포션">
+                <div class="posionHPSub">
+                    <h1>HP 물약</h1>
+                    <p>HP를 상승시키는 물약이다. <br>
+                        사용 시 HP를 50씩 증가시킨다.</p>
+                </div>
+
+                <img class="posionAtk" src="../공격력증가.png" alt="공격력증가포션">
+                <div class="posionAtkSub">
+                    <h1>공격력 증가포션</h1>
+                    <p>공격력을 상승시키는 물약이다. <br>
+                        사용 시 공격력을 10분동안 10을 증가시킨다.</p>
+                </div>
+
+                
+            <div class="divWeapon">
+                <img class="sword" src="../검.png" alt="검">
+                <div class="swordSub">
+                    <h1>초보자의 검</h1>
+                    <p>초보자가 사용하는 검이다. <br>
+                        착용 시 공격력을 5증가시킨다.</p>
+                </div>
+
+                <img class="armour" src="../공격력증가.png" alt="방어구">
+                <div class="armourSub">
+                    <h1>초보자의 갑옷</h1>
+                    <p>초보자가 사용하는 갑옷이다. <br>
+                        착용 시 방어력을 5증가시킨다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="./상점.js"></script>
+</html>

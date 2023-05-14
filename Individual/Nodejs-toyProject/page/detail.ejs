@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="div-top">
+            <a class="arrow" href="/list"><img src="/css/arrow.png" alt="로고 이미지"></a>
+            <h1>게시글 상세내용</h1>
+        </div>
+        <div class="row1">
+            <div class="num-box">
+                <span class="num"><%= data.postIndex %></span>
+            </div>
+            <div class="title"><%= data.title %></div>
+            <div class="content"><%= data.content %></div>
+            <div class="image-box">
+                <img src="/image/<%= data.image %>" alt="왜안나옴">
+            </div>
+            <div class="row2">
+
+                <a href="/list/likes/<%= data.postIndex %>">
+                    <div class="heart">
+                        <div class="like"><%= data.likes %></div>
+                    </div>
+                </a>
+
+                <a href="/list/edit/<%= data.postIndex %>">
+                    <div class="edit"></div>
+                </a>
+
+                <a href="/list/delete/<%= data.postIndex %>">
+                    <div class="delete"></div>
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="row3">
+            <div class="comment1 pop">
+                <div class="arrow"></div>
+                <div class="com"><%= data.comment %></div>
+                <button class="com-btn1">댓글등록</button>
+            </div>
+            <div class="comment2">
+                <form method="post">
+                    <textarea name="comment" cols="70" rows="5" style="resize: none;"></textarea>
+                    <button class="com-btn2">등록</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    let com1 = document.querySelector(".comment1");
+    let com2 = document.querySelector(".comment2");
+
+    const btn1 = document.querySelector(".com-btn1");
+    const btn2 = document.querySelector(".com-btn2");
+
+    btn1.onclick = ()=>{
+        console.log("클릭1");
+        if(com1.classList.contains("pop")){
+            com1.classList.toggle("pop");
+            com2.classList.toggle("pop");
+        }
+    };
+
+    btn2.onclick = ()=>{
+        console.log("클릭2");
+        if(com2.classList.contains("pop")){
+            com1.classList.toggle("pop");
+            com2.classList.toggle("pop");
+        }
+    }
+
+</script>
+</html>

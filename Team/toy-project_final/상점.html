@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상점</title>
+    <link rel="stylesheet" href="./상점.css">
+</head>
+<body>
+    <div class="background">
+        <div class="back">돌아가기</div>
+        <div class="my">                                        <!--내 정보 영역-->
+            <div class="monster">
+                <img src="./몬스터의 잔해.png" alt="몬스터의 잔해">
+                <span class="monsterText">15</span>             <!--플레이어 소지하고 있는 몬스터의잔해 연결-->
+            </div>
+            <div class="money">
+                <img src="./돈.png" alt="money">
+                <span class="moneyText"><span class="infovalue5"></span></span>               <!--플레이어 소지금 연결-->
+            </div>
+        </div>
+    
+        <div class="ground">                                    <!--불투명한 하얀배경-->
+            <div class="Posiontitle">물약</div>
+            <div class="divPosion">                             <!--물약 상품 노출영역-->
+                <img id="HP" class="posionHP" src="./체력증가.png" alt="hp포션">
+                <div class="posionHPSub">
+                    <h1>HP 물약</h1>
+                    <p>HP를 상승시키는 물약이다. <br>
+                        사용 시 HP를 50씩 증가시킨다.
+                        <br> : <span class="infoValue1">0</span>개</p>
+                </div>
+
+                <img id="ATK" class="posionAtk" src="./공격력증가.png" alt="공격력증가포션">
+                <div class="posionAtkSub">
+                    <h1>공격력 증가포션</h1>
+                    <p>공격력을 상승시키는 물약이다. <br>
+                        사용 시 공격력을 10을 증가시킨다.
+                         <br> : <span class="infoValue">0</span>개</p>
+                    
+                </div>
+               
+                <img id="SH" class="shield" src="./방패.png" alt="방어구">
+                <div class="shieldSub">
+                    <h1>방어력 증가포션</h1>
+                    <p>방어력을 상승시키는 물약이다. <br>
+                        사용 시 방어력을 10을 증가시킨다.
+                        <br> : <span class="infoValue2">0</span>개</p>
+                </div>
+            </div>
+
+            <div class="weaponTitle">무기</div>
+            <div class="divWeapon">                             <!--무기 상품 노출영역-->
+                <img id="SD" class="sword" src="./검.png" alt="검">
+                <div class="swordSub">
+                    <h1>초보자의 검</h1>
+                    <p>초보자가 사용하는 검이다. <br>
+                        착용 시 공격력을 5증가시킨다.</p>
+                </div>
+
+                <img id="AM" class="armour" src="./갑옷.png" alt="방어구">
+                <div class="armourSub">
+                    <h1>초보자의 갑옷</h1>
+                    <p>초보자가 사용하는 갑옷이다. <br>
+                        착용 시 방어력을 5증가시킨다.</p>
+                </div>
+            </div>
+            <div class="changeTitle">몬스터의 잔해 교환</div>
+            <div class="change">                                <!--몬스터의 잔해 교환영역-->
+                <div class="divRemains">
+                    <img class="monRemains" src="./몬스터의 잔해.png" alt="몬스터의 잔해">
+                    <div class="monRemainsSub"><span class="cntRemains">15</span> /5</div>      <!--몬스터의 잔해 소유량 / 1회 교환수량 -->
+                </div>
+                <div class="equal">=</div>
+                <div class="divmoney">
+                    <img class="moneyC" src="./돈.png" alt="돈">
+                    <div class="moneyCsub"><span class="infovalue4">1000</span></div>   <!--1회 교환 시 지급되는 money-->
+                </div>
+                <div id="chg" onclick="change();" class="btnchange">교환하기</div>
+            </div>
+            <div class="info">
+                <div class="infoHP">    <!--HP 물약 선택시 나오는 팝업창-->
+                    <img id="hpX" class="X" src="./하얀 X.png" alt="x버튼">
+                    <img class="mainImg" src="./체력증가.png" alt="hp포션">
+                    <p class="infoTitle">HP 물약</p>
+                    <p class="HPbuy">가격: 100$</p>       <!--hp 금액-->
+                    <div class="countbtn">
+                        <input class="countbtnPlus" type='button' onclick='countHp("HPplus")' value='+'/>
+                        <input class="countbtnMinus" type='button' onclick='countHp("HPminus")' value='-'/>
+                        <div id='HPresult'>0</div>
+                    </div>
+                    <div class="buyBtn" onclick="buy()">구매하기</div>
+                </div>
+                <div class="infoAtk">       <!--ATK 물약 선택시 나오는 팝업창-->
+                    <img id="atkX" class="X" src="./하얀 X.png" alt="x버튼">
+                    <img class="mainImg" src="./공격력증가.png" alt="공격력증가">
+                    <p class="infoTitle">공격력증가<br>포션</p>
+                    <p class="HPbuy">가격: 100$</p>   
+                    <div class="countbtn">
+                        <input class="countbtnPlus" type='button' onclick='countAtk("ATKplus")' value='+'/>
+                        <input class="countbtnMinus" type='button' onclick='countAtk("ATKminus")' value='-'/>
+                        <div id='ATKresult'>0</div>
+                    </div>
+                    <div class="buyBtn" onclick="buy()" >구매하기</div>
+                </div>
+                <div class="infoSd">        <!--검 선택시 나오는 팝업창-->
+                    <img id="SdX" class="X" src="./하얀 X.png" alt="x버튼">
+                    <img class="mainImg" src="./검.png" alt="검">
+                    <p class="infoTitle">초보자의 검</p>
+                    <p class="HPbuy">가격: 500$</p>   
+                    <div class="countbtn">
+                        <input class="countbtnPlus" type='button' onclick='countSD("SDplus")' value='+'/>
+                        <input class="countbtnMinus" type='button' onclick='countSD("SDminus")' value='-'/>
+                        <div id='SDresult'>0</div>
+                    </div>
+                    <div class="buyBtn" >구매하기</div>
+                </div>
+                <div class="infoAm">        <!--갑옷 선택시 나오는 팝업창-->
+                    <img id="AMX" class="X" src="./하얀 X.png" alt="x버튼">
+                    <img class="mainImg" src="./갑옷.png" alt="갑옷">
+                    <p class="infoTitle">초보자의 갑옷</p>
+                    <p class="HPbuy">가격: 500$</p>   
+                    <div class="countbtn">
+                        <input class="countbtnPlus" type='button' onclick='countAM("AMplus")' value='+'/>
+                        <input class="countbtnMinus" type='button' onclick='countAM("AMminus")' value='-'/>
+                        <div id='AMresult'>0</div>
+                    </div>
+                    <div class="buyBtn">구매하기</div>
+                </div>
+                <div class="infoSh">        <!--방패 선택시 나오는 팝업창-->
+                    <img id="SHX" class="X" src="./하얀 X.png" alt="x버튼">
+                    <img class="mainImg" src="./방패.png" alt="방패">
+                    <p class="infoTitle">초보자의 방패</p>
+                    <p class="HPbuy">가격: 500$</p>   
+                    <div class="countbtn">
+                        <input class="countbtnPlus" type='button' onclick='countSH("SHplus")' value='+'/>
+                        <input class="countbtnMinus" type='button' onclick='countSH("SHminus")' value='-'/>
+                        <div id='SHresult'>0</div>
+                    </div>
+                    <div class="buyBtn" onclick="buy2()" >구매하기</div>
+                </div>
+    
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+<script>
+    console.log(window.localStorage.getItem('상점'));
+
+    document.querySelector('.back').onclick = function () {
+        window.localStorage.setItem("메인","1");
+        window.location.href = './index.html'
+    }
+
+</script>
+<script src="./상점.js"></script>
+<script src="./index.js"></script>
+</html>

@@ -1,0 +1,571 @@
+@font-face{
+    font-family: 'dos';
+    src: url('./DOSGothic.ttf') format('truetype');  
+}
+
+body{
+    margin: 0;
+    /* height: 100vh; */
+    font-family: 'dos';
+    
+}
+
+.background{                                /*마리오 배경*/
+    background-image: url(./배경.png);
+    /* background-size: 100vw, 100vh; */
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+.back {                                     /* 돌아가기 버튼 > 상점, 산책 페이지로 이동 */
+    width: 150px;
+    height: 50px;
+    background-color: rgb(217, 144, 66);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.my{                                /*상단 내 소지금, 몬스터의 잔해 개수 노출영역*/
+    position: absolute;
+    width: 700px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.7);
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.monster{                           /*내가 소지하고 있는 몬스터의 잔해 노출영역*/
+    width: 200px;
+    height: 60px;
+}
+
+.monster img, .money img
+{                               /*상단 우측 몬스터의 잔해, 돈 이미지*/
+    width: 70px;
+    height: 70px;
+}
+
+.monsterText{                   /*상단 우측 몬스터의 잔해 개수*/
+    font-size: 40px;
+    left: 170px;
+    top: 65%;
+    transform: translate(0, -50%);
+    position: absolute;
+}
+
+.moneyText{                   /*상단 우측 소지금 텍스트*/
+    font-size: 40px;
+    left: 465px;
+    top: 65%;
+    transform: translate(0, -50%);
+    position: absolute;
+}
+
+.money{                             /*내 소지금 노출영역*/
+    width: 200px;
+    height: 60px;
+}
+
+
+.ground{                                    /* 불투명한 흰 박스 */
+    position: relative;
+    margin: 0;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1000px;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
+
+}
+
+.Posiontitle{                               /* 물약 타이틀 */
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 65px;
+    width: 870px;
+    border-bottom: 5px solid;
+    
+}
+
+.weaponTitle{                               /* 무기 타이틀 */
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 230px;
+    left: 65px;
+    width: 870px;
+    border-bottom: 5px solid;
+
+}
+
+.changeTitle{                               /* 몬스터의 잔해 교환 타이틀 */
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 465px;
+    left: 65px;
+    width: 870px;
+    border-bottom: 5px solid;
+
+}
+
+.divPosion{                                 /* 물약 진열 영역*/
+    position: relative;
+    top: 78px;
+    left: 26px;
+    width: 870px;
+    height: 150px;
+    margin-left: 40px;
+}
+
+.divWeapon{                                 /* 무기 진열 영역*/
+    position: relative;
+    top: 145px;
+    left: 65px;
+    width: 870px;
+    height: 150px;
+    
+}
+
+.change{                                 /* 무기 진열 영역*/
+    position: relative;
+    top: 255px;
+    width: 870px;
+    height: 150px;
+    
+}
+
+.posionHP,
+.posionAtk,
+.sword,
+.armour,
+.shield {                   /* 제품 이미지 규격, 커서설정정*/
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+}
+
+.posionHPSub,               /* 제품 마우스오버 시 노출되는 설명*/
+.posionAtkSub,
+.swordSub,
+.armourSub,
+.shieldSub {
+    position: absolute;
+    top: 100px;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: none;
+    z-index: 1;
+}
+
+.posionHPSub {                              /* hp증가포션 마우스오버 시 나오는 설명영역*/
+    left: 100px;
+}
+
+.posionHPSub h1{                             /* hp증가포션 마우스오버 시 나오는 설명 - 제목*/
+    position: absolute;
+    left: 50px;
+}
+
+.posionHPSub p{                             /* hp증가포션 마우스오버 시 나오는 설명 - 설명*/
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 20px;
+}
+
+.posionHP:hover ~ .posionHPSub,
+.posionAtk:hover ~ .posionAtkSub,
+.sword:hover ~ .swordSub,
+.armour:hover ~ .armourSub,
+.shield:hover ~ .shieldSub{             /* hp증가포션 등에 설명 hover 적용 */
+    display: block;
+}
+
+.posionHP:hover,
+.posionAtk:hover,
+.sword:hover,
+.armour:hover,
+.shield:hover{             /* hp증가포션 등에 아이콘 배경 hover 적용 */
+    background-color: rgba(182, 182, 182, 0.258);
+}
+
+
+.posionAtk{                                 /* 별 - 공격력 증가포션 */
+    left: 170px;
+    top: 4px;
+}
+
+
+.posionAtkSub {                             /* 공격력증가포션 마우스오버 시 나오는 설명영역*/
+    left: 280px;
+}
+
+.posionAtkSub h1{                           /* 공격력증가포션 마우스오버 시 나오는 설명 - 제목*/
+    position: absolute;
+    left: 50px;
+}
+
+.posionAtkSub p{                            /* 공격력증가포션 마우스오버 시 나오는 설명 - 설명*/
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 20px;
+
+}
+
+.swordSub {                              /* 검 마우스오버 시 나오는 설명영역*/
+    left: 100px;
+}
+
+.swordSub h1{                           /* 검 마우스오버 시 나오는 설명 - 제목*/
+    position: absolute;
+    left: 50px;
+}
+
+.swordSub p{                            /* 검 마우스오버 시 나오는 설명 - 설명*/
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 20px;
+
+}
+
+
+.armour{                            /* 갑옷 이미지 */
+    left: 170px;
+    top: 4px;
+}
+
+.armourSub {                             /* 갑옷 마우스오버 시 나오는 설명영역*/
+    left: 280px;
+}
+
+.armourSub h1{                           /* 갑옷 마우스오버 시 나오는 설명 - 제목*/
+    position: absolute;
+    left: 50px;
+}
+
+.armourSub p{                            /* 갑옷 마우스오버 시 나오는 설명 - 설명*/
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 20px;
+
+}
+
+.shield{                            /* 방패 이미지 */
+    left: 350px;
+    top: 4px;
+}
+
+.shieldSub {                             /* 방패 마우스오버 시 나오는 설명영역*/
+    left: 460px;
+}
+
+.shieldSub h1{                           /* 방패 마우스오버 시 나오는 설명 - 제목*/
+    position: absolute;
+    left: 50px;
+}
+
+.shieldSub p{                            /* 방패 마우스오버 시 나오는 설명 - 설명*/
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 20px;
+
+}
+
+.divRemains{                            /* 몬스터의 잔해 교환 > 몬스터의 잔해 영역*/
+    position: absolute;
+    left: 70px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.monRemains,
+.moneyC {                            /*몬스터의 잔해, 교환금 이미지*/
+    width: 150px;
+    height: 150px;
+}
+
+.monRemainsSub,
+.moneyCsub{                         /*몬스터의 잔해 개수 / 교환금 금액*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.equal{                                 /*몬스터의 잔해 영역의 ' = ' */
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    transform: translate(-50%);
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.divmoney{                              /* 몬스터의 잔해 교환 > 교환금 영역*/
+    position: absolute;
+    left: 424px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.btnchange{                             /*교환하기 버튼*/
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 150px;
+    height: 50px;
+    background-color: rgb(217, 144, 66);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.info{
+    position: absolute;
+   
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    width: 400px;
+    height: 600px;
+    left: 600px;
+    top: 0px;    
+}
+
+/*-------------------------- HP 물약 선택시 나오는 팝업창 ---------------------------------*/
+.infoHP{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: none;
+    
+}
+
+.infoHP.open{
+    display: block;
+    
+}
+
+#HPresult {
+    position: absolute;
+    left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*-------------------------- ATK 물약 선택시 나오는 팝업창 ---------------------------------*/
+.infoAtk{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: none;
+     
+}
+
+.infoAtk.open{
+    display: block;
+    
+}
+
+
+#ATKresult {
+    position: absolute;
+    left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+/*--------------------------  sword 선택시 나오는 팝업창 ---------------------------------*/
+.infoSd{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: none;
+    
+}
+
+.infoSd.open{
+    display: block;
+    
+}
+
+
+#SDresult {
+    position: absolute;
+    left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*--------------------------  armour 선택시 나오는 팝업창 ---------------------------------*/
+.infoAm{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: none;
+    
+}
+
+.infoAm.open{
+    display: block;
+    
+}
+
+
+#AMresult {
+    position: absolute;
+    left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+/*--------------------------  shield 선택시 나오는 팝업창 ---------------------------------*/
+.infoSh{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 600px;
+    position: relative;
+    display: none;
+    
+}
+
+.infoSh.open{
+    display: block;
+    
+}
+
+
+#SHresult {
+    position: absolute;
+    left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+
+.X{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.mainImg{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.infoTitle{
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    
+
+}
+
+.HPbuy{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+.countbtn{
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 20px;
+    width: 400px;
+    height: 50px;
+}
+
+.countbtnPlus{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 60px;
+}
+
+.countbtnMinus{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+}
+
+
+.buyBtn{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(217, 144, 66);
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

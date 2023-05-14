@@ -1,0 +1,76 @@
+/* 어그로체 볼드 (도입부분 폰트) */
+@font-face {
+    font-family: 'Aggro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.Prologue{
+    background-color: #FFF4E0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.Prologue h1{
+    font-family: 'Aggro';
+    color: #FFF4E0;
+    font-size: 200px;
+    /* 텍스트 외곽 선 left(X좌표, Y좌표, 컬러), bottom, right, top  */
+    text-shadow: -3px 0px #B46060, 0px 3px #B46060, 3px 0px #B46060, 0px -3px #B46060;
+    
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.prol1,
+.prol2,
+.prol3,
+.prol4,
+.prol5{
+    opacity: 0;
+}
+
+.prol1.Pactive,
+.prol2.Pactive,
+.prol3.Pactive,
+.prol4.Pactive,
+.prol5.Pactive{
+    animation: pop 2s ease;
+}
+
+@keyframes pop {
+    0%{
+        font-size: 150px;
+        opacity: 1;
+    }
+    25%{
+        font-size: 250px;
+        opacity: 1;
+
+    }
+    50%{
+        font-size: 200px;
+        opacity: 1;
+
+    }
+    75%{
+        top: 50%;
+        opacity: 1;
+
+    }
+    100%{
+        top: 77%;
+        opacity: 0;
+    }
+}
