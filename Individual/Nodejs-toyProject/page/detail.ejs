@@ -17,26 +17,26 @@
         </div>
         <div class="row1">
             <div class="num-box">
-                <span class="num"><%= data.postIndex %></span>
+                <span class="num"><%= postdata.postIndex %></span>
             </div>
-            <div class="title"><%= data.title %></div>
-            <div class="content"><%= data.content %></div>
+            <div class="title"><%= postdata.title %></div>
+            <div class="content"><%= postdata.content %></div>
             <div class="image-box">
-                <img src="/image/<%= data.image %>" alt="왜안나옴">
+                <img src="/image/<%= postdata.image %>" alt="왜안나옴">
             </div>
             <div class="row2">
 
-                <a href="/list/likes/<%= data.postIndex %>">
+                <a href="/list/likes/<%= postdata.postIndex %>">
                     <div class="heart">
-                        <div class="like"><%= data.likes %></div>
+                        <div class="like"><%= postdata.likes %></div>
                     </div>
                 </a>
 
-                <a href="/list/edit/<%= data.postIndex %>">
+                <a href="/list/edit/<%= postdata.postIndex %>">
                     <div class="edit"></div>
                 </a>
 
-                <a href="/list/delete/<%= data.postIndex %>">
+                <a href="/list/delete/<%= postdata.postIndex %>">
                     <div class="delete"></div>
                 </a>
             </div>
@@ -46,7 +46,7 @@
         <div class="row3">
             <div class="comment1 pop">
                 <div class="arrow"></div>
-                <div class="com"><%= data.comment %></div>
+                <div class="com"><%= postdata.comment %></div>
                 <button class="com-btn1">댓글등록</button>
             </div>
             <div class="comment2">

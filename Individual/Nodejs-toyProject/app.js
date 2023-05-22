@@ -47,7 +47,7 @@ const listRoute = require("./routes/router");
 const verifyRouter = require("./routes/verify");
 
 app.use(session({
-    secret : process.env.KEY2,
+    secret : process.env.SESSION_KEY,
     resave : false,
     saveUninitialized : false
 }));

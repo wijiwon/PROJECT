@@ -2,7 +2,7 @@ const router = require("express").Router();
 const dot = require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-router.('/list', (req,res)=>{
+router.post('/list', (req,res)=>{
     const token = req.session.token;
     const key = process.env.KEY;
     jwt.verify(token, key, (err, decoded)=>{

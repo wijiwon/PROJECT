@@ -9,14 +9,17 @@ const jwt = require("jsonwebtoken");
 //-------------------------------------------------------------------------------------------------
 const router = express.Router();
 
-const { ViewPostAll, Insert, SelectPost, Update, Delete, Comment, Likes, Signup, Login } = require("../controllers/controllers");
+const { ViewPostAll, Insert, SelectPost, Update, Delete, Comment, Likes, Signup, Login, Verify } = require("../controllers/controllers");
 const multer = require("multer");
 
 router.get('/', async(req,res)=>{
     try {
-        const data = await ViewPostAll(req, res);
-
+        const { data } = await ViewPostAll(req, res);
+        // if(con === 1){
+        //     res.render('main', { data });
+        // };
         res.render('main', { data });
+        res.send("다시 로그인하세요!")
     } catch (error) {
         console.log("자유게시판 그리다 에러!")
     }
@@ -34,7 +37,7 @@ router.get('/signup',(req,res)=>{
 router.post('/signup', async(req,res)=>{
     try {
         await Signup(req,res);
-        res.redirect('/list');
+        res.redirect('/list/login');
     } catch (error) {
         console.log("(router) 회원가입 하다가 에러남")
     }
@@ -51,53 +54,17 @@ router.get('/loginerr',(req,res)=>{
 })
 
 // 로그인 버튼 동작
-router.post('/login', async(req,res)=>{
-    try {
-        const data = await Login(req,res);
-        console.log("유저정보 알려줘",data)
-        console.log("유저정보 알려줘",data.id)
-        if(data === undefined){
-            res.redirect('/list/loginerr');
- 
-        }
-        else{
-            const name = data.id;
-            const key = process.env.KEY;
-            const token = jwt.sign({
-                type : "JWT",
-                name : name
-            }, key, {
-                expiresIn : "10s",
-                // issuer는 문자열로 넣어주세요!
-                issuer : name
-            })
-            console.log(req.session);
-            console.log(req.session.token,'원본;');
-
-            req.session.regenerate((err)=>{
-                if(err){
-                    console.log(err)
-                }
-                else{
-                    req.session.token = token;
-                    res.redirect('/list');
-                }
-
-            })
-            console.log(req.session.token,'바뀐거;');
-        }
-        // console.log(req);
-    } catch (error) {
-        console.log(error)
-        console.log("(router) 로그인 하다가 에러남!")
-    }
-})
+router.post('/login', Login)
 
 
 //----- 게시글 관련 메소드 -------------------------------------------------------------------------------
 
 // 게시글 추가 페이지를 그림
-router.get('/insert', (req,res)=>{
+router.get('/insert', Verify, (req,res)=>{
+
+    // if(con === 1){ 
+    // };
+    // res.send("다시 로그인하세요!")
     res.render('insert');
 })
 
@@ -130,17 +97,21 @@ router.post('/insert', upload.single('image'), async(req,res)=>{
 // 게시글 상세 페이지
 router.get('/detail/:postIndex', async (req,res)=>{
     try {
-        const data = await SelectPost(req,res);
-        res.render('detail',{data})
+        const {postdata, userdata} = await SelectPost(req,res);
+        console.log("postdata",postdata)
+        console.log("userdata",userdata)
+        res.render('detail',{postdata})
     } catch (error) {
         console.log("(router) 게시글 상세페이지 그리다 에러남!")
     }
 })
 // 게시글 수정 페이지 그림
-router.get('/edit/:postIndex', async (req,res)=>{
+router.get('/edit/:postIndex', Verify, async (req,res)=>{
     try {
-        const data = await SelectPost(req,res);
-        res.render('edit',{data});
+        const {postdata, userdata} = await SelectPost(req,res);
+        console.log("postdata",postdata)
+        console.log("userdata",userdata)
+        res.render('edit',{postdata});
     } catch (error) {
         console.log("(router) 수정 페이지 그리다 에러!")
     }
